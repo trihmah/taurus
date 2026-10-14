@@ -23,7 +23,7 @@ jobs:
       - name: Checkout source from GitLab
         run: |
           git clone --depth 1 --recurse-submodules --shallow-submodules \
-            https://gitlab.com/taurustweak/taurus.git .
+            https://gitlab.com/trihmah/taurus .
 
       - uses: levibostian/action-hide-sensitive-inputs@v1
 

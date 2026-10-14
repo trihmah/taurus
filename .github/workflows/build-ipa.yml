@@ -56,6 +56,15 @@ jobs:
           name: spoti.ipa
           path: out/*.ipa
           if-no-files-found: error
+          
+      - uses: actions/upload-artifact@v5
+        if: inputs.upload_method != 'filebin'
+        with:
+          name: spoti-deb
+          path: |
+            packages/*.deb
+            out/*.deb
+          if-no-files-found: error
 
       - name: Upload to filebin.net
         if: inputs.upload_method != 'artifacts'

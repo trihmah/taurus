@@ -62,7 +62,7 @@ jobs:
         with:
           name: spoti-deb
           path: |
-            packages/*.deb
+            tweak/packages/*.deb
             out/*.deb
           if-no-files-found: error
 

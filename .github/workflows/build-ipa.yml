@@ -20,7 +20,10 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout source from GitLab
+        run: |
+          git clone --depth 1 --recurse-submodules --shallow-submodules \
+            https://gitlab.com/taurustweak/taurus.git .
 
       - uses: levibostian/action-hide-sensitive-inputs@v1
 
